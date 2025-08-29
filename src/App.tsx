@@ -67,7 +67,7 @@ function App() {
     }, 1000)
 
     return () => clearTimeout(timeoutId)
-  }, [content, saveMutation])
+  }, [content]) // Remove saveMutation from dependencies
 
   const handleContentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setContent(e.target.value)
